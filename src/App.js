@@ -10,7 +10,7 @@ function App() {
       <div className="h-[12rem] "></div>
       <Hero_section />
       <Logo_carousel />
-      <Tiers />
+      {/* <Tiers /> */}
     </div>
   );
 }
