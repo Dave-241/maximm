@@ -11,7 +11,7 @@ const Hero_section = () => {
   }, []);
   return (
     <>
-      <div className=" w-full flex justify-between flex-col md:flex-row md:gap-0 gap-[5rem]  md:px-[8%] mb-[5rem] px-[3%] ">
+      <div className=" w-full flex justify-between flex-col md:flex-row md:gap-0 gap-[5rem]  md:px-[8%] mb-[7rem] px-[3%] ">
         <div className="flex px-[4%] w-full flex-col md:gap-[2rem] gap-[1.2rem]">
           <h1
             className={`text-white md:text-[4rem] text-[2.7rem] leading-[3.5rem] md:leading-[5rem] modal-title  ${
@@ -62,13 +62,13 @@ const Hero_section = () => {
             alt="hero image"
             className={`  ${
               start_animation ? " rotate-0" : " rotate-[70deg]"
-            } md:w-[80%] w-[90%] h-fit`}
+            } md:w-[80%] w-[90%] md:h-[25rem] h-[20rem] `}
             style={{ transition: "1s ease" }}
           />
           <div
             className={` ${
               start_animation ? " rotate-0" : " rotate-[-70deg]"
-            } md:w-[80%] border border-opacity-[60%] border-white  rounded-[1.5rem]  h-full  absolute top-[10%] right-[10%] flex flex-col overflow-hidden`}
+            } md:w-[80%] border border-opacity-[60%] border-white  rounded-[1.5rem]  md:h-[25rem] h-[20rem]  absolute top-[10%] right-[10%] flex flex-col overflow-hidden`}
             style={{ transition: "1s ease" }}
           >
             <div className="w-full h-[20%] bg-white bg-opacity-[4%] backdrop-blur-xl flex justify-center flex-col  items-center">
