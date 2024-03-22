@@ -34,7 +34,7 @@ const Tiers = () => {
             return (
               <div
                 key={index}
-                className="bg-[#131313] gap-[1rem] rounded-[2rem] md:w-[26%] lg:w-[21%] w-[80%] md:rounded-[2rem] md:px-[2.4rem] md:py-[1.7rem] px-[2.5rem] py-[1rem] flex flex-col md:gap-[1.6rem]  items-center "
+                className="bg-[#131313] gap-[0.8rem] rounded-[2rem] md:w-[26%] lg:w-[21%] w-[80%] md:rounded-[2rem] md:px-[2.4rem] md:py-[1.7rem] px-[2.5rem] py-[1rem] flex flex-col md:gap-[1.6rem]  items-center "
               >
                 <p className="text-white modal-title text-opacity-[30%] md:text-[1.2rem] text-[0.8rem] ">
                   {" "}
