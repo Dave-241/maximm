@@ -29,19 +29,19 @@ const Tiers = () => {
         </p>
 
         {/* bottom tiers */}
-        <div className="flex md:gap-[2.5rem] gap-[1.5rem] md:flex-row flex-col items-center justify-center ">
+        <div className="flex md:gap-[2.5rem] gap-[1rem] md:flex-row flex-col items-center justify-center ">
           {logo_array.map((e, index) => {
             return (
               <div
                 key={index}
-                className="bg-[#131313] gap-[1rem] rounded-[2rem] md:w-[26%] lg:w-[21%] w-[85%] md:rounded-[2rem] md:px-[2.4rem] md:py-[1.7rem] px-[2.5rem] py-[1rem] flex flex-col md:gap-[1.6rem]  items-center "
+                className="bg-[#131313] gap-[1rem] rounded-[2rem] md:w-[26%] lg:w-[21%] w-[80%] md:rounded-[2rem] md:px-[2.4rem] md:py-[1.7rem] px-[2.5rem] py-[1rem] flex flex-col md:gap-[1.6rem]  items-center "
               >
-                <p className="text-white modal-title text-opacity-[30%] md:text-[1.2rem]">
+                <p className="text-white modal-title text-opacity-[30%] md:text-[1.2rem] text-[0.8rem] ">
                   {" "}
                   Teir {index + 1}
                 </p>
                 <div className="flex flex-col  gap-[0.5rem]">
-                  <p className="modal-title md:text-[1.5rem] text-[1.2rem] text-center text-white">
+                  <p className="modal-title md:text-[1.5rem] text-[1rem] text-center text-white">
                     {e.token}
                   </p>
                   <p className="modal-title md:text-[1rem] text-[0.8rem] text-center text-opacity-[40%] text-white">
