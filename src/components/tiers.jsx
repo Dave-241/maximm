@@ -18,7 +18,7 @@ const Tiers = () => {
   ];
   return (
     <>
-      <div className="fixed z-[10000000]  flex flex-col justify-center items-center top-0 left-0 w-full h-full bg-black bg-opacity-[90%] gap-[1.4rem] md:gap-[3rem]">
+      <div className="fixed z-[10000000]  flex flex-col justify-center items-center top-0 left-0 w-full h-full bg-black bg-opacity-[95%] gap-[1.4rem] md:gap-[3rem]">
         <img
           src={exit}
           alt="exit ham"
