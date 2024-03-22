@@ -28,10 +28,11 @@ const Logo_carousel = () => {
   return (
     <>
       <div className=" flex md:pt-[2rem] flex-wrap md:mb-0  md:flex-nowrap items-center gap-[10%] md:gap-[3%]  justify-center ">
-        {logo_array.map((e) => {
+        {logo_array.map((e, index) => {
           return (
             <img
               src={e.img}
+              key={index}
               alt="maxim text"
               className=" opacity-[40%] md:w-[11%] mb-[15%] w-[40%] h-fit"
             />
