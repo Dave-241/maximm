@@ -33,7 +33,7 @@ const Hero_section = () => {
           <div
             className={`flex md:gap-[2.5rem]  ${
               start_animation ? " translate-y-0" : " translate-y-[5rem]"
-            } pr-[2%] modal-title  md:justify-start w-full justify-between`}
+            }  modal-title gap-[2rem]  justify-start w-full `}
             style={{ transition: "1s ease" }}
           >
             <button
