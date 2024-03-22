@@ -22,7 +22,7 @@ const Tiers = () => {
         <img
           src={exit}
           alt="exit ham"
-          className="fixed md:top-[5rem] top-[2rem]  left-[50%] translate-x-[-50%] w-[3rem] h-fit cursor-pointer"
+          className="fixed md:top-[5rem] top-[2rem]  left-[2rem] md:left-[50%] md:translate-x-[-50%] w-[3rem] h-fit cursor-pointer"
         />
         <p className="text-white  modal-title md:text-[2rem] md:mt-0 mt-[2rem] ">
           Token tiers
