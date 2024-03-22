@@ -29,7 +29,7 @@ const Tiers = () => {
         </p>
 
         {/* bottom tiers */}
-        <div className="flex md:gap-[3.5rem] gap-[1.5rem] md:flex-row flex-col items-center justify-center ">
+        <div className="flex md:gap-[2.5rem] gap-[1.5rem] md:flex-row flex-col items-center justify-center ">
           {logo_array.map((e, index) => {
             return (
               <div
