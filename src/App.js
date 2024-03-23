@@ -7,10 +7,9 @@ function App() {
   return (
     <div className="w-full bg-gradient-to-r from-[#000000] to-[#050621]">
       <Nav />
-      <div className="h-[12rem] "></div>
+      <div className="md:h-[15rem] h-[12rem] "></div>
       <Hero_section />
       <Logo_carousel />
-      <Tiers />
     </div>
   );
 }

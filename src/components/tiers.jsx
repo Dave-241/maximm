@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import exit from "../images/exit.webp";
 import right_arrow from "../images/right_arrow.png";
 
-const Tiers = () => {
+const Tiers = ({ setshow_tiers }) => {
   const logo_array = [
     {
       token: "$0.005/Token",
@@ -16,25 +17,54 @@ const Tiers = () => {
       text: "More information would be added here for more description",
     },
   ];
+  const [start_animation, setstart_anitmation] = useState(false);
+
+  useEffect(() => {
+    setstart_anitmation(true);
+  }, []);
   return (
     <>
-      <div className="fixed z-[10000000]  flex flex-col justify-center items-center top-0 left-0 w-full h-full bg-black bg-opacity-[95%] gap-[1.4rem] md:gap-[3rem]">
+      <div
+        onClick={() => {
+          setshow_tiers(false);
+        }}
+        className="fixed z-[10000000]  flex flex-col justify-center items-center top-0 left-0 w-full h-full bg-black bg-opacity-[95%] gap-[1.4rem] md:gap-[3rem]"
+      >
         <img
           src={exit}
+          onClick={(e) => {
+            e.stopPropagation(e);
+            setshow_tiers(false);
+          }}
           alt="exit ham"
           className="fixed md:top-[5rem] top-[2rem]  left-[2rem] md:left-[50%] md:translate-x-[-50%] w-[3rem] h-fit cursor-pointer"
         />
-        <p className="text-white  modal-title md:text-[2rem] md:mt-0 mt-[2rem] ">
+        <p
+          onClick={(e) => {
+            e.stopPropagation(e);
+          }}
+          className="text-white  modal-title md:text-[1.5rem] md:mt-0 mt-[2rem] "
+        >
           Token tiers
         </p>
 
         {/* bottom tiers */}
-        <div className="flex md:gap-[2.5rem] gap-[1rem] md:flex-row flex-col items-center justify-center ">
+        <div
+          className={` ${
+            start_animation
+              ? " translate-y-0 opacity-100"
+              : " translate-y-[5rem] opacity-0"
+          } flex md:gap-[2.5rem] gap-[1rem] md:flex-row flex-col items-center justify-center `}
+          style={{ transition: "0.6s ease" }}
+        >
           {logo_array.map((e, index) => {
             return (
               <div
+                onClick={(e) => {
+                  e.stopPropagation(e);
+                }}
                 key={index}
-                className="bg-[#131313] gap-[0.8rem] rounded-[2rem] md:w-[26%] lg:w-[21%] w-[80%] md:rounded-[2rem] md:px-[2.4rem] md:py-[1.7rem] px-[2.5rem] py-[1rem] flex flex-col md:gap-[1.6rem]  items-center "
+                className="bg-[#131313] gap-[0.8rem] rounded-[2rem] md:w-[26%] lg:w-[20%] w-[80%] md:rounded-[2rem] md:px-[2.4rem] md:py-[1.7rem] px-[2.5rem] py-[1rem] flex flex-col md:gap-[1.6rem]  items-center "
               >
                 <p className="text-white modal-title text-opacity-[30%] md:text-[1.2rem] text-[0.8rem] ">
                   {" "}
@@ -44,7 +74,7 @@ const Tiers = () => {
                   <p className="modal-title md:text-[1.5rem] text-[1rem] text-center text-white">
                     {e.token}
                   </p>
-                  <p className="modal-title md:text-[1rem] text-[0.8rem] text-center text-opacity-[40%] text-white">
+                  <p className="modal-title md:text-[0.9rem] text-[0.8rem] text-center text-opacity-[40%] text-white">
                     {e.text}
                   </p>
                 </div>

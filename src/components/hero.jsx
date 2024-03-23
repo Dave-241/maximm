@@ -3,16 +3,18 @@ import hero_bg from "../images/hero_bg.webp";
 import progress from "../images/progress.webp";
 import play from "../images/play.webp";
 import { useEffect, useState } from "react";
+import Tiers from "./tiers";
 const Hero_section = () => {
   const [start_animation, setstart_anitmation] = useState(false);
+  const [show_tiers, setshow_tiers] = useState(false);
 
   useEffect(() => {
     setstart_anitmation(true);
   }, []);
   return (
     <>
-      <div className=" w-full flex justify-between flex-col md:flex-row md:gap-0 gap-[5rem]  md:px-[8%] mb-[7rem] px-[3%] ">
-        <div className="flex px-[4%] w-full flex-col md:gap-[2rem] gap-[1.2rem]">
+      <div className=" w-full flex justify-between  flex-col md:flex-row md:gap-0 gap-[5rem]  md:px-[8%] mb-[7rem] px-[3%] ">
+        <div className="flex pr-[4%]  w-full flex-col md:gap-[2rem] gap-[1.2rem]">
           <h1
             className={`text-white md:text-[4rem] text-[2.7rem] leading-[3.5rem] md:leading-[5rem] modal-title  ${
               start_animation ? " translate-y-0" : " translate-y-[5rem]"
@@ -84,6 +86,9 @@ const Hero_section = () => {
                 </p>
 
                 <button
+                  onClick={() => {
+                    setshow_tiers(true);
+                  }}
                   className={` bg-[#A4A7F2]  hover:text-white  transition duration-[0.6s] flex justify-center hover:bg-black md:gap-[0.6rem] items-center md:rounded-[1.5rem] gap-[0.5rem] md:text-[1rem] text-[0.8rem] px-[1rem] py-[0.5rem] rounded-[2rem] md:px-[1.5rem] md:py-[0.7rem] border border-[#A4A7F2] hover:border-white `}
                 >
                   View tiers
@@ -93,6 +98,8 @@ const Hero_section = () => {
           </div>
         </div>
       </div>
+
+      {show_tiers && <Tiers setshow_tiers={setshow_tiers} />}
     </>
   );
 };
