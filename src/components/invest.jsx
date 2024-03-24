@@ -59,7 +59,7 @@ const Invest = ({ setshow_invest }) => {
                 <input
                   type="number"
                   placeholder="What you invest"
-                  className="w-full h-full bg-white text-white text-opacity-[80%] md:pl-[5%] md:pr-[30%] pl-[5%] pr-[20%] text-[0.8rem] bg-opacity-[4%]"
+                  className="w-full h-full bg-white outline-none border-none text-white text-opacity-[80%] md:pl-[5%] md:pr-[30%] pl-[5%] pr-[20%] text-[0.8rem] bg-opacity-[4%]"
                 />
                 <img
                   src={dollar}
@@ -73,12 +73,12 @@ const Invest = ({ setshow_invest }) => {
                 <input
                   type="number"
                   placeholder="The maxim tokens you get"
-                  className="w-full h-full bg-white  text-white text-opacity-[80%] md:pl-[5%] md:pr-[30%]  pl-[5%] pr-[20%] text-[0.8rem]  bg-opacity-[4%]"
+                  className="w-full h-full bg-white outline-none border-none  text-white text-opacity-[80%] md:pl-[5%] md:pr-[30%]  pl-[5%] pr-[20%] text-[0.8rem]  bg-opacity-[4%]"
                 />
                 <img
                   src={token}
                   alt="What you invest"
-                  className="absolute top-[50%] outline-none border-none md:w-[15%] w-[10%] right-[0.5rem] translate-y-[-50%] right-[md:1rem]"
+                  className="absolute top-[50%]  md:w-[15%] w-[10%] right-[0.5rem] translate-y-[-50%] right-[md:1rem]"
                 />
               </div>
             </div>
