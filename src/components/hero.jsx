@@ -8,10 +8,55 @@ import Invest from "./invest";
 const Hero_section = ({ setshow_invest }) => {
   const [start_animation, setstart_anitmation] = useState(false);
   const [show_tiers, setshow_tiers] = useState(false);
+  const [target_date, settarget_date] = useState(new Date());
 
   useEffect(() => {
     setstart_anitmation(true);
   }, []);
+  const currentDate = new Date();
+  const targetDate = new Date(target_date.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days ahead
+  const calculateTimeLeft = () => {
+    // const difference = +new Date("2024-03-24T00:00:00Z") - +new Date();
+
+    console.log("Current Date:", currentDate);
+    console.log("Target Date:", targetDate);
+
+    const difference = targetDate - currentDate;
+    console.log("Difference:", difference);
+
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+    // settime_array([timeLeft]);
+    return timeLeft;
+  };
+  const [time, setTime] = useState(calculateTimeLeft());
+  const [time_array, settime_array] = useState([calculateTimeLeft()]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTime(calculateTimeLeft());
+    }, 1000);
+    return () => clearTimeout(timer);
+  });
+
+  useEffect(() => {
+    // console.log(time);
+    settime_array([time]);
+    console.log(time_array);
+  }, [time]);
+
   return (
     <>
       <div className=" w-full flex justify-between  flex-col md:flex-row md:gap-0 gap-[5rem]  md:px-[8%] mb-[7rem] px-[3%] ">
@@ -82,7 +127,45 @@ const Hero_section = ({ setshow_invest }) => {
                 PRIVATE SALE ROUNDS UP IN
               </h3>
             </div>
-            <div className="h-[80%] px-[5%]   bg-black bg-opacity-[5%] backdrop-blur-xl flex justify-center flex-col  items-center w-full ">
+            <div className="h-[80%] px-[5%]   bg-black bg-opacity-[5%] backdrop-blur-xl flex justify-center gap-[1rem] md:gap-[1.2rem] flex-col  items-center w-full ">
+              <div className=" text-[1.3rem] w-full flex gap-[5%] md:gap-[7%] justify-between">
+                <div className="flex flex-col w-full items-center gap-[0.3rem]">
+                  <div className=" w-full h-[4rem] md:h-[5rem] text-center flex items-center justify-center bg-black bg-opacity-[40%] text-[#BA86EB] rounded-[0.8rem] md:rounded-[1.2rem]">
+                    {time_array[0].days}
+                  </div>
+
+                  <p className="text-[#BA86EB] text-[1rem] text-opacity-[50%] ">
+                    Days
+                  </p>
+                </div>
+                <div className="flex flex-col w-full items-center gap-[0.3rem]">
+                  <div className=" w-full h-[4rem] md:h-[5rem] text-center flex items-center justify-center bg-black bg-opacity-[40%] text-[#BA86EB] rounded-[0.8rem] md:rounded-[1.2rem]">
+                    {time_array[0].hours}
+                  </div>
+
+                  <p className="text-[#BA86EB] text-[1rem] text-opacity-[50%] ">
+                    Hrs
+                  </p>
+                </div>{" "}
+                <div className="flex flex-col w-full items-center gap-[0.3rem]">
+                  <div className=" w-full h-[4rem] md:h-[5rem] text-center flex items-center justify-center bg-black bg-opacity-[40%] text-[#BA86EB] rounded-[0.8rem] md:rounded-[1.2rem]">
+                    {time_array[0].minutes}
+                  </div>
+
+                  <p className="text-[#BA86EB] text-[1rem] text-opacity-[50%] ">
+                    Mins
+                  </p>
+                </div>{" "}
+                <div className="flex flex-col w-full items-center gap-[0.3rem]">
+                  <div className=" w-full h-[4rem] md:h-[5rem] text-center flex items-center justify-center bg-black bg-opacity-[40%] text-[#BA86EB] rounded-[0.8rem] md:rounded-[1.2rem]">
+                    {time_array[0].seconds}
+                  </div>
+
+                  <p className="text-[#BA86EB] text-[1rem] text-opacity-[50%] ">
+                    Secs
+                  </p>
+                </div>
+              </div>
               <img src={progress} alt="progress " className="w-full h-fit" />{" "}
               <div className="flex items-center  w-full  justify-between">
                 <p className=" modal-title md:w-auto w-[50%] text-[#B784E7] md:text-[1.1rem]">
