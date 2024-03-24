@@ -100,7 +100,7 @@ const Invest = ({ setshow_invest }) => {
             </div>
             {/* invest button */}
             <button
-              className={` bg-[#272DE6] border w-fit   border-[#272DE6] hover:border-[white] transition duration-[0.4s] flex justify-center    hover:bg-[#24232395] md:gap-[0.6rem] items-center md:rounded-[2rem] text-[0.8rem]  md:text-[1rem] gap-[0.5rem] px-[0.6rem] py-[0.3rem] rounded-[2rem]  md:py-[0.6rem] text-white`}
+              className={` bg-[#272DE6] border w-fit   border-[#272DE6] hover:border-[white] transition duration-[0.4s] flex justify-center    hover:bg-[#24232395] md:gap-[0.6rem] items-center md:rounded-[2rem] text-[0.8rem]  md:text-[1rem] gap-[0.5rem] px-[0.7rem] py-[0.4rem] rounded-[2rem]  md:py-[0.6rem] text-white`}
             >
               Invest now
               <div className=" rounded-[100%] w-[1.5rem] h-[1.5rem] flex justify-center  items-center bg-white ">
