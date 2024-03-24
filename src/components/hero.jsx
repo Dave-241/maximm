@@ -111,7 +111,7 @@ const Hero_section = ({ setshow_invest }) => {
           <div
             className={` ${
               start_animation ? " rotate-0" : " rotate-[-70deg]"
-            } md:w-[80%] border border-opacity-[60%] border-white  rounded-[1.5rem]  md:h-[25rem] h-[20rem]  absolute top-[10%] right-[10%] flex flex-col overflow-hidden`}
+            } md:w-[80%] border border-opacity-[40%] border-white  rounded-[1.5rem]  md:h-[25rem] h-[20rem]  absolute top-[10%] right-[10%] flex flex-col overflow-hidden`}
             style={{ transition: "1s ease" }}
           >
             <div className="w-full h-[20%] bg-white bg-opacity-[4%] backdrop-blur-xl flex justify-center flex-col  items-center">
