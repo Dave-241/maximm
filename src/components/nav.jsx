@@ -1,7 +1,7 @@
 import logo_1 from "../images/logo.png";
 import right_arrow from "../images/right_arrow.png";
 
-const Nav = () => {
+const Nav = ({ setshow_invest }) => {
   const links = [
     {
       text: "About",
@@ -36,6 +36,9 @@ const Nav = () => {
               <>
                 {e.blue ? (
                   <button
+                    onClick={() => {
+                      setshow_invest(true);
+                    }}
                     key={index}
                     className={` bg-[#272DE6] border modal-title  border-[#272DE6] hover:border-[white] transition duration-[0.4s] flex justify-center hover:bg-black md:gap-[0.6rem] items-center md:rounded-[2rem] text-[0.8rem]  md:text-[1rem] gap-[0.5rem] px-[0.6rem] py-[0.3rem] rounded-[2rem] md:px-[0.5rem] md:py-[0.3rem] text-white`}
                   >

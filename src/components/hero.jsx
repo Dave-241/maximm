@@ -4,7 +4,8 @@ import progress from "../images/progress.webp";
 import play from "../images/play.webp";
 import { useEffect, useState } from "react";
 import Tiers from "./tiers";
-const Hero_section = () => {
+import Invest from "./invest";
+const Hero_section = ({ setshow_invest }) => {
   const [start_animation, setstart_anitmation] = useState(false);
   const [show_tiers, setshow_tiers] = useState(false);
 
@@ -40,6 +41,9 @@ const Hero_section = () => {
           >
             <button
               className={` bg-[#272DE6]  transition duration-[0.6s] flex justify-center hover:bg-black md:gap-[0.6rem] items-center md:rounded-[2rem] gap-[0.5rem] md:text-[1.2rem] px-[1rem] py-[0.5rem] rounded-[2rem] md:px-0 md:py-[0.7rem] border border-[#272DE6] hover:border-white text-white`}
+              onClick={() => {
+                setshow_invest(true);
+              }}
             >
               Invest now
               <img
