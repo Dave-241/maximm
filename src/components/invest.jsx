@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import exit from "../images/exit.webp";
 import right_arrow from "../images/right_arrow.png";
 import dollar from "../images/dollar.webp";
-import swap from "../images/swap.png";
+import swap from "../images/swap.webp";
 import token from "../images/token.webp";
 
 const Invest = ({ setshow_invest }) => {
