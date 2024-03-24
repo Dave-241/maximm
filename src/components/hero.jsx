@@ -16,13 +16,7 @@ const Hero_section = ({ setshow_invest }) => {
   const currentDate = new Date();
   const targetDate = new Date(target_date.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days ahead
   const calculateTimeLeft = () => {
-    // const difference = +new Date("2024-03-24T00:00:00Z") - +new Date();
-
-    console.log("Current Date:", currentDate);
-    console.log("Target Date:", targetDate);
-
     const difference = targetDate - currentDate;
-    console.log("Difference:", difference);
 
     let timeLeft = {
       days: 0,
@@ -52,9 +46,7 @@ const Hero_section = ({ setshow_invest }) => {
   });
 
   useEffect(() => {
-    // console.log(time);
     settime_array([time]);
-    console.log(time_array);
   }, [time]);
 
   return (
