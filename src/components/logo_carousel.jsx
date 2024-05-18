@@ -27,14 +27,14 @@ const Logo_carousel = () => {
   ];
   return (
     <>
-      <div className=" flex md:pt-[2rem]  flex-wrap md:mb-0  md:flex-nowrap items-center gap-[10%] md:gap-[3%]  justify-center ">
+      <div className=" flex md:pt-[2rem] w-full md:mb-0  items-center  md:gap-[3%] justify-around md:justify-center ">
         {logo_array.map((e, index) => {
           return (
             <img
               src={e.img}
               key={index}
               alt="maxim text"
-              className=" opacity-[40%] md:w-[11%] md:mb-[4rem] mb-[15%] w-[40%] h-fit"
+              className=" opacity-[40%] md:w-[11%] md:mb-[4rem]  mb-[30%] w-[13%]  h-fit"
             />
           );
         })}
